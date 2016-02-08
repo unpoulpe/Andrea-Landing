@@ -1,0 +1,117 @@
+body {
+    background: #090B20;
+}
+
+.intro {
+    display: block;
+    animation: 0.3s ease-in all;
+}
+
+.svg {
+    transition: transform 0.3s linear;
+}
+
+.progress {
+    height: 4px;
+    background: rgb(195, 15, 134);
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 0%;
+    transition: height 1s ease-in-out;
+    animation: progressing 5s cubic-bezier(0, 0.71, 0.23, -0.02) forwards;
+}
+
+
+.container {
+    width: 417px;
+    right: calc(50% - 207px);
+    position: absolute;
+    top: calc(50% - 80px);
+    animation: dispear 2s ease-in;
+    animation-delay: 5s;
+    display: block;
+}
+
+p.punchline {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 4.9px;
+    text-align: center;
+    font-size: 12px;
+    animation: appear 4s ease-in forwards;
+    opacity: 0;
+}
+
+.continue {
+    display: block;
+    margin: auto;
+    height: 35px;
+    width: 130px;
+    border-radius: 45px;
+    border: none;
+    outline: none;
+    color: white;
+    background: rgb(195, 15, 134);
+    margin-top: 40px;
+    cursor: pointer;
+    animation: button 1s ease-in forwards;
+    animation-delay: 5s;
+    opacity: 0;
+    text-transform: uppercase;
+}
+
+.second {
+    display: none;
+    color: white;
+    position: absolute;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: -4.9px;
+    font-size: 23px;
+    right: calc(50% - 207px);
+    top: calc(50% - 80px);
+}
+
+#logo {
+    fill: none;
+    animation: color 1s ease-in forwards;
+    animation-delay: 4s;
+}
+.path {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    stroke: white;
+    animation: dash 5s linear forwards;
+}
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes color {
+    to {
+        fill: white;
+    }
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes button {
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes progressing {
+    to {
+        width: 100%;
+    }
+}
