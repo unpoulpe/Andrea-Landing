@@ -31,6 +31,9 @@ body {
     animation: dispear 2s ease-in;
     animation-delay: 5s;
     display: block;
+    @media screen and (max-width: 700px) {
+        top: calc(30% - 80px;)
+    }
 }
 
 p.punchline {
